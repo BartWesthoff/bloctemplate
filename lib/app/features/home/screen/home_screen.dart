@@ -24,7 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // final user = context.select((AuthenticationBloc bloc) => bloc.state.user);
     return Scaffold(
-      extendBody: true,
       backgroundColor: const Color(0xFF121212),
       body: Column(
         children: [

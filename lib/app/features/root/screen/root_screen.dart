@@ -23,7 +23,6 @@ class _RootScreenState extends State<RootScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
       bottomNavigationBar: const BottomNavBar(),
       body: BlocBuilder<NavBarCubit, NavBarState>(
         builder: (context, state) {
