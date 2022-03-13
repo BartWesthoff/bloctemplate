@@ -1,0 +1,11 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    avoid_print: false
+    avoid_classes_with_only_static_members: false
+    avoid_relative_lib_imports: false
+    depend_on_referenced_packages: false
+    sort_pub_dependencies: false
+    avoid_void_async: false
+

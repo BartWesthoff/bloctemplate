@@ -1,0 +1,42 @@
+{
+  "logout": "Log out",
+  "cancel": "Cancel",
+  "yes": "Yes",
+  "delete": "Delete",
+  "sharing": "Sharing",
+  "ok": "OK",
+  "login": "Login",
+  "verify_email": "Verify email",
+  "register": "Register",
+  "restart": "Restart",
+
+  "generic_error_prompt": "An error occurred",
+  "logout_dialog_prompt": "Are you sure you want to log out?",
+
+  "password_reset": "Password reset",
+  "password_reset_dialog_prompt": "We have now sent you a password reset link. Please check your email for more information.",
+
+  "login_error_cannot_find_user": "Cannot find a user with the entered credentials!",
+  "login_error_wrong_credentials": "Wrong credentials",
+  "login_error_auth_error": "Authentication error",
+
+  "forgot_password": "Forgot Password",
+
+  "register_error_email_already_in_use": "This email is already registered to another user. Please choose another email!",
+  "register_error_generic": "Failed to register. Please try again later!",
+  "register_error_invalid_email": "The email address you entered appears to be invalid. Please try another email address!",
+  "register_view_already_registered": "Already registered? Login here!",
+
+  "verify_email_view_prompt": "We've sent you an email verification. Please open it to verify your account. If you haven't received a verification email yet, press the button below!",
+  "verify_email_send_email_verification": "Send email verification",
+
+  "notes_title": "{count, plural, =0{No notes yet} =1{1 note} other{{count} notes}}",
+  "@notes_title": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3 notes"
+      }
+    }
+  }
+}

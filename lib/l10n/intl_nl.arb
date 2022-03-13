@@ -1,0 +1,42 @@
+{
+  "logout": "Log uit",
+  "cancel": "Annuleren",
+  "yes": "Ja",
+  "delete": "Verwijderen",
+  "sharing": "Delen",
+  "ok": "Bevestigen",
+  "login": "Login",
+  "verify_email": "Email verifieëren",
+  "register": "Registreer",
+  "restart": "Start opnieuw",
+
+  "generic_error_message": "Er is een fout opgestreden.",
+  "logout_dialog_message": "Weet je zeker dat je wilt uitloggen?",
+
+  "password_reset": "Password reset",
+  "password_reset_dialog_prompt": "We hebben een link gestuurd om uw wachtwoord te resetten. Bekijk de e-mail voor meer informatie",
+
+  "login_error_cannot_find_user": "Cannot find a user with the entered credentials!",
+  "login_error_wrong_credentials": "Onjuiste inloggegevens",
+  "login_error_auth_error": "Authenticatie fout",
+
+  "forgot_password": "Wachtwoord vergeten",
+
+  "register_error_email_already_in_use": "E-mail is al reeds in gebruik. Kies een ander e-mailadress.",
+  "register_error_generic": "Fout tijdens het registeren. Probeer het opnieuw",
+  "register_error_invalid_email": "De email die u heeft ingevuld is niet ongeldig. Probeer een ander e-mailadress",
+  "register_view_already_registered": "Heeft u al een account? Log hier in!",
+
+  "verify_email_view_prompt": "We've sent you an email verification. Please open it to verify your account. If you haven't received a verification email yet, press the button below!",
+  "verify_email_send_email_verification": "Vertificatie link gestuurd",
+
+  "notes_title": "{count, plural, =0{No notes yet} =1{1 note} other{{count} notes}}",
+  "@notes_title": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3 notes"
+      }
+    }
+  }
+}
