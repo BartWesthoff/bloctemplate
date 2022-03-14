@@ -24,7 +24,7 @@ def run_win_cmd(cmd):
     if errcode is not None:
         raise Exception('cmd %s failed, see above for details', cmd)
 
-#run_win_cmd(command)
+run_win_cmd(command)
 google_services_version = ""
 with open('android/app/build.gradle', 'w+') as build:
     with open('settings.json', 'r') as f:
@@ -151,6 +151,6 @@ task clean(type: Delete) {
 
 
 
-#webbrowser.open('https://console.firebase.google.com/u/0/')  # Go to example.com
+webbrowser.open('https://console.firebase.google.com/u/0/')  # Go to example.com
 
 
