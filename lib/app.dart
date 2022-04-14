@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:bloctemplate/src/config/routes/routes.dart';
 import 'package:bloctemplate/src/features/authentication/bloc/authentication_bloc.dart';
 import 'package:bloctemplate/src/features/root/bloc/nav_bar_cubit.dart';
 import 'package:bloctemplate/src/features/theme/theme.dart';
 import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -51,7 +54,18 @@ class AppView extends StatelessWidget {
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         FlutterNativeSplash.remove();
-        return MaterialApp.router(
+        final platformIsIOS = Platform.isIOS;
+        final cupertinoApp = Theme(
+          data: state.theme,
+          child: CupertinoApp.router(
+            routeInformationParser: router.routeInformationParser,
+            routerDelegate: router.routerDelegate,
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            debugShowCheckedModeBanner: false,
+          ),
+        );
+        final materialApp = MaterialApp.router(
           routeInformationParser: router.routeInformationParser,
           routerDelegate: router.routerDelegate,
           supportedLocales: AppLocalizations.supportedLocales,
@@ -59,6 +73,8 @@ class AppView extends StatelessWidget {
           theme: state.theme,
           debugShowCheckedModeBanner: false,
         );
+        final app = platformIsIOS ? cupertinoApp : materialApp;
+        return app;
       },
     );
   }
