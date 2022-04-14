@@ -36,13 +36,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
-  authentication_repository:
-    dependency: "direct main"
-    description:
-      path: "packages/authentication_repository"
-      relative: true
-    source: path
-    version: "1.0.0"
   bloc:
     dependency: "direct main"
     description:
@@ -114,7 +107,7 @@ packages:
     source: hosted
     version: "1.1.0"
   cloud_firestore:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cloud_firestore
       url: "https://pub.dartlang.org"
@@ -267,6 +260,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.2.1"
+  firebase_auth_repository:
+    dependency: "direct main"
+    description:
+      path: "packages/firebase_auth_service"
+      ref: HEAD
+      resolved-ref: "007970dd8bd66a333ad3a2513b88ce4fbf3f9055"
+      url: "https://github.com/BartWesthoff/packages"
+    source: git
+    version: "0.0.1"
   firebase_auth_web:
     dependency: transitive
     description:
@@ -323,6 +325,36 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.9"
+  firebase_storage:
+    dependency: "direct main"
+    description:
+      name: firebase_storage
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "10.2.9"
+  firebase_storage_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_storage_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.1"
+  firebase_storage_web:
+    dependency: transitive
+    description:
+      name: firebase_storage_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.10"
+  firestore_service:
+    dependency: "direct main"
+    description:
+      path: "packages/firestore_service"
+      ref: HEAD
+      resolved-ref: "007970dd8bd66a333ad3a2513b88ce4fbf3f9055"
+      url: "https://github.com/BartWesthoff/packages"
+    source: git
+    version: "0.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -1063,5 +1095,5 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.16.0 <3.0.0"
+  dart: ">=2.16.1 <3.0.0"
   flutter: ">=2.10.0"

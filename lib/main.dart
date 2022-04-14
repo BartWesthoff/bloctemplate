@@ -1,7 +1,7 @@
-import 'package:authentication_repository/authentication_repository.dart';
 import 'package:bloc/bloc.dart';
-import 'package:bloctemplate/app/app.dart';
-import 'package:bloctemplate/app/bloc_observer.dart';
+import 'package:bloctemplate/app.dart';
+import 'package:bloctemplate/bloc_observer.dart';
+import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
