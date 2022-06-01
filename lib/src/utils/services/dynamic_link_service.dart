@@ -6,16 +6,7 @@ class DynamicLinkService {
   static final DynamicLinkService instance = DynamicLinkService._();
 
   void initDynamicLinks() async {
-    FirebaseDynamicLinks.instance.onLink(
-      onSuccess: (PendingDynamicLinkData? dynamicLink) async {
-        final Uri deeplink = dynamicLink!.link;
-
-        handleDynamicLink(deeplink);
-      },
-      onError: (OnLinkErrorException e) async {
-        print("We got error $e");
-      },
-    );
+    FirebaseDynamicLinks.instance.onLink;
   }
 
   void handleDynamicLink(Uri deepLink) {
@@ -50,9 +41,10 @@ class DynamicLinkService {
       //   minimumVersion: '0',
       // ),
     );
-    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+    final dynamicLink =
+        await FirebaseDynamicLinks.instance.buildLink(parameters);
 
-    final String desc = dynamicUrl.shortUrl.toString();
+    final String desc = dynamicLink.toString();
     print(desc);
 
     return desc;
