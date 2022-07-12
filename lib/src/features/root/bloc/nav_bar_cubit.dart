@@ -3,21 +3,21 @@ import 'package:equatable/equatable.dart';
 
 part 'nav_bar_state.dart';
 
-enum NavbarItem { home, search, library }
+enum NavbarItem { feature1, feature2, feature3 }
 
 class NavBarCubit extends Cubit<NavBarState> {
-  NavBarCubit() : super(const NavBarState(NavbarItem.home, 0));
+  NavBarCubit() : super(const NavBarState(NavbarItem.feature1, 0));
 
   void getNavBarItem(NavbarItem navbarItem) {
     switch (navbarItem) {
-      case NavbarItem.home:
-        emit(const NavBarState(NavbarItem.home, 0));
+      case NavbarItem.feature1:
+        emit(const NavBarState(NavbarItem.feature1, 0));
         break;
-      case NavbarItem.search:
-        emit(const NavBarState(NavbarItem.search, 1));
+      case NavbarItem.feature2:
+        emit(const NavBarState(NavbarItem.feature2, 1));
         break;
-      case NavbarItem.library:
-        emit(const NavBarState(NavbarItem.library, 2));
+      case NavbarItem.feature3:
+        emit(const NavBarState(NavbarItem.feature3, 2));
         break;
     }
   }

@@ -32,8 +32,8 @@ class DynamicLinkService {
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: url,
       link: Uri.parse('$url/post?title=$title'),
-      androidParameters: AndroidParameters(
-        packageName: "com.example.bloctemplate.bloctemplate",
+      androidParameters: const AndroidParameters(
+        packageName: "com.example.bloctemplate",
         minimumVersion: 0,
       ),
       // iosParameters: IosParameters(

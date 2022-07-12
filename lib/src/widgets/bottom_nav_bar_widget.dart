@@ -37,13 +37,13 @@ class BottomNavBar extends StatelessWidget {
           onTap: (index) {
             if (index == 0) {
               BlocProvider.of<NavBarCubit>(context)
-                  .getNavBarItem(NavbarItem.home);
+                  .getNavBarItem(NavbarItem.feature1);
             } else if (index == 1) {
               BlocProvider.of<NavBarCubit>(context)
-                  .getNavBarItem(NavbarItem.search);
+                  .getNavBarItem(NavbarItem.feature2);
             } else if (index == 2) {
               BlocProvider.of<NavBarCubit>(context)
-                  .getNavBarItem(NavbarItem.library);
+                  .getNavBarItem(NavbarItem.feature3);
             }
           },
         );

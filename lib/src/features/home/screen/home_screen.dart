@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Feature1Screen extends StatefulWidget {
+  const Feature1Screen({Key? key}) : super(key: key);
 
-  static Page page() => const MaterialPage<void>(child: HomeScreen());
+  static Page page() => const MaterialPage<void>(child: Feature1Screen());
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Feature1Screen> createState() => _Feature1ScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _Feature1ScreenState extends State<Feature1Screen> {
   @override
   void initState() {
     // TODO: implement initState
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 context
                     .read<AuthenticationBloc>()
                     .add(AuthenticationLogoutRequested());
-                context.go(Routes.intro);
+                context.go(Routes.welcome);
               },
               child: const Text("hi"),
             ),

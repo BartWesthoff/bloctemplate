@@ -1,6 +1,6 @@
 {
   "google-services": "4.3.10",
   "firebase-bom": "29.0.3",
-  "packagename": "com.example.bloctemplate.bloctemplate",
+  "packagename": "com.example.bloctemplate",
   "language": "java"
 }

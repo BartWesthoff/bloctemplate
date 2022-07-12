@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 class FutureWidget extends StatelessWidget {
   const FutureWidget(
-      {Key? key,
+      {super.key,
       required this.future,
       required this.successWidget,
-      required this.errorWidget})
-      : super(key: key);
+      required this.errorWidget,})
+     ;
 
   final Future<String> future;
   final Widget successWidget;
   final Widget errorWidget;
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

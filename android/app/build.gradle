@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.bloctemplate.bloctemplate"
+        applicationId "com.example.bloctemplate"
         minSdkVersion 23
         targetSdkVersion 31
         multiDexEnabled true
@@ -60,7 +60,11 @@ dependencies {
     implementation "androidx.multidex:multidex:2.0.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    // FIREBASE_BOM_VERSION
+
     implementation 'com.google.firebase:firebase-analytics'
+    //implementation 'com.google.firebase:firebase-analytics-ktx'
+    // APP_LANGUAGE
     implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-dynamic-links'   

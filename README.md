@@ -2,18 +2,13 @@
 
 New BLoC template 
 
-1.0 run getkey.py first to get sha256 key and sha1 key
+1.0 search for // GOOGLE_SERVICES_VERSION
+ 1.1  check: https://developers.google.com/android/guides/google-services-plugin for latest version
+2.0 search for // FIREBASE_BOM_VERSION
+    2.1 heck: https://firebase.google.com/support/release-notes/android for latest version
+3.0 search for // APP_LANGUAGE
+    3.1 KTX is for kotlin and wihtout KTX is for java
 
-2.0 settings.json
-    2.1  check: https://developers.google.com/android/guides/google-services-plugin for latest version
-    2.2  check: for com.google.fireabse:firebase-bom:XX.X.X check: https://firebase.google.com/support/release-notes/android
-    2.3  in settings.json set your version for google-services
-    2.4 set android_language  to the language chosen (either java or kotlin)
-
-3.0 go to https://console.firebase.google.com and create new firebase project 
-    3.1 click on android setup and fill in the SHA1 key and package name in settings.json
-    3.2 download google-services.json and re-place it in android/app 
-    3.3 now press next 2 times and Continue to console (you did this in step 2)
 
 4.0 fcm
     4.1 past '<intent-filter>
