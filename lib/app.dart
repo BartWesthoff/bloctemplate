@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:bloctemplate/src/config/routes/routes.dart';
-import 'package:bloctemplate/src/features/authentication/bloc/authentication_bloc.dart';
+import 'package:bloctemplate/src/config/router/router.dart';
+import 'package:bloctemplate/src/features/auth/bloc/auth_bloc.dart';
 import 'package:bloctemplate/src/features/root/bloc/nav_bar_cubit.dart';
 import 'package:bloctemplate/src/features/theme/theme.dart';
 import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
@@ -28,7 +28,7 @@ class App extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (_) => AuthenticationBloc(
+            create: (_) => AuthBloc(
               authenticationRepository: _authenticationRepository,
             ),
           ),
@@ -50,7 +50,7 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GoRouter router = routes(context.read<AuthenticationBloc>());
+    final GoRouter router = routes(context.read<AuthBloc>());
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         FlutterNativeSplash.remove();

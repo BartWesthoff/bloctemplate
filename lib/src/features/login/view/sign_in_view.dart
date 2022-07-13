@@ -1,13 +1,13 @@
-import 'package:bloctemplate/src/features/authentication/bloc/authentication_bloc.dart';
-import 'package:bloctemplate/src/features/signin/bloc/login_bloc.dart';
-import 'package:bloctemplate/src/features/signin/widgets/widgets.dart';
+import 'package:bloctemplate/src/features/auth/bloc/auth_bloc.dart';
+import 'package:bloctemplate/src/features/login/bloc/login_bloc.dart';
+import 'package:bloctemplate/src/features/login/widgets/widgets.dart';
 import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+class SignInView extends StatelessWidget {
+  const SignInView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SignInScreen extends StatelessWidget {
                   ..showSnackBar(
                     SnackBar(
                       content: Text(
-                        state.errorMessage ?? 'Authentication Failure',
+                        state.errorMessage ?? 'Auth Failure',
                       ),
                     ),
                   );
@@ -66,7 +66,7 @@ class SignInScreen extends StatelessWidget {
                       const SizedBox(height: 60),
                       Text(
                         context
-                            .read<AuthenticationBloc>()
+                            .read<AuthBloc>()
                             .state
                             .status
                             .toString(),

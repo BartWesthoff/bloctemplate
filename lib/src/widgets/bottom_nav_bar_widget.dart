@@ -19,19 +19,19 @@ class BottomNavBar extends StatelessWidget {
               icon: Icon(
                 Icons.home,
               ),
-              label: 'Home',
+              label: 'Feature1',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.search,
               ),
-              label: 'Search',
+              label: 'Feature2',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
               ),
-              label: 'Settings',
+              label: 'Feature3',
             ),
           ],
           onTap: (index) {

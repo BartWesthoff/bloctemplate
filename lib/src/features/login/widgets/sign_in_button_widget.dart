@@ -1,4 +1,4 @@
-import 'package:bloctemplate/src/config/routes/routes.dart';
+import 'package:bloctemplate/src/config/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

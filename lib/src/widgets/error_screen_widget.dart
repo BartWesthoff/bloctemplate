@@ -1,9 +1,9 @@
-import 'package:bloctemplate/src/config/routes/routes.dart';
+import 'package:bloctemplate/src/config/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ErrorScreen extends StatelessWidget {
-  const ErrorScreen({Key? key, required this.error}) : super(key: key);
+class ErrorView extends StatelessWidget {
+  const ErrorView({Key? key, required this.error}) : super(key: key);
 
   final Exception? error;
 

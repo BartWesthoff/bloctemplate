@@ -3,23 +3,24 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
-part 'authentication_event.dart';
-part 'authentication_state.dart';
 
-class AuthenticationBloc
-    extends Bloc<AuthenticationEvent, AuthenticationState> {
-  AuthenticationBloc({
+part 'auth_event.dart';
+
+part 'auth_state.dart';
+
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  AuthBloc({
     required AuthenticationRepository authenticationRepository,
   })  : _authenticationRepository = authenticationRepository,
         super(
           authenticationRepository.currentUser.isNotEmpty
-              ? AuthenticationState.authenticated(
+              ? AuthState.authenticated(
                   authenticationRepository.currentUser,
                 )
-              : const AuthenticationState.unauthenticated(),
+              : const AuthState.unauthenticated(),
         ) {
     on<AuthenticationStatusChanged>(_onAuthenticationStatusChanged);
-    on<AuthenticationLogoutRequested>(_onAuthenticationLogoutRequested);
+    on<AuthLogoutRequested>(_onAuthLogoutRequested);
     _authenticationStatusSubscription = _authenticationRepository.status.listen(
       (status) => add(AuthenticationStatusChanged(status)),
     );
@@ -38,23 +39,23 @@ class AuthenticationBloc
 
   void _onAuthenticationStatusChanged(
     AuthenticationStatusChanged event,
-    Emitter<AuthenticationState> emit,
+    Emitter<AuthState> emit,
   ) {
     switch (event.status) {
       case AuthenticationStatus.unauthenticated:
-        return emit(const AuthenticationState.unauthenticated());
+        return emit(const AuthState.unauthenticated());
       case AuthenticationStatus.authenticated:
         final user = _authenticationRepository.currentUser;
-        return emit(AuthenticationState.authenticated(user));
+        return emit(AuthState.authenticated(user));
       default:
       // final user = await _authenticationRepository.currentUser;
-      // return emit(AuthenticationState.authenticated(user));
+      // return emit(AuthState.authenticated(user));
     }
   }
 
-  void _onAuthenticationLogoutRequested(
-    AuthenticationLogoutRequested event,
-    Emitter<AuthenticationState> emit,
+  void _onAuthLogoutRequested(
+    AuthLogoutRequested event,
+    Emitter<AuthState> emit,
   ) {
     _authenticationRepository.signOut();
   }

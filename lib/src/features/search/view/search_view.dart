@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Feature2Screen extends StatelessWidget {
-  const Feature2Screen({Key? key}) : super(key: key);
+class Feature2View extends StatelessWidget {
+  const Feature2View({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

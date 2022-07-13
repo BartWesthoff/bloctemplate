@@ -1,13 +1,13 @@
-import 'package:bloctemplate/src/config/routes/routes.dart';
-import 'package:bloctemplate/src/features/authentication/bloc/authentication_bloc.dart';
+import 'package:bloctemplate/src/config/router/router.dart';
+import 'package:bloctemplate/src/features/auth/bloc/auth_bloc.dart';
 import 'package:bloctemplate/src/widgets/primary_action_button_widget.dart';
 import 'package:bloctemplate/src/widgets/secondary_action_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class IntroScreen extends StatelessWidget {
-  const IntroScreen({Key? key}) : super(key: key);
+class IntroView extends StatelessWidget {
+  const IntroView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class IntroScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                context.read<AuthenticationBloc>().state.status.toString(),
+                context.read<AuthBloc>().state.status.toString(),
                 style: Theme.of(context)
                     .textTheme
                     .subtitle2
