@@ -21,15 +21,22 @@ dependencies:
     path: packages/form_inputs
   google_fonts: any
   very_good_analysis: any
+  flutter_local_notifications: ^9.7.0
   lint: any
-  shared_preferences: any
   firebase_messaging: any
-  flutter_local_notifications: any
   uuid: any
+  flutter_native_timezone: ^2.0.0
+  http: ^0.13.4
+  image: ^3.0.8
+  path_provider: ^2.0.0
+  rxdart: ^0.27.2
+  shared_preferences: ^2.0.1
   json_serializable: any
   google_maps_flutter: any
   device_info_plus: any
   intl: any
+  cupertino_icons: ^1.0.2
+  device_info: ^2.0.2
   firebase_dynamic_links: ^4.2.5
   url_launcher: any
   flutter_launcher_icons: any

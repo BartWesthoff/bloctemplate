@@ -1,3 +1,4 @@
+import 'package:bloctemplate/src/config/notifications/local/local_notifications.dart';
 import 'package:bloctemplate/src/config/router/router.dart';
 import 'package:bloctemplate/src/features/auth/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +17,15 @@ class Feature1View extends StatefulWidget {
 class _Feature1ViewState extends State<Feature1View> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    LocalNotificationService.requestPermissions();
+    LocalNotificationService.handleNotification(context);
+  }
+
+  @override
+  void dispose() {
+    selectNotificationSubject.close();
+    super.dispose();
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:bloctemplate/app.dart';
 import 'package:bloctemplate/bloc_observer.dart';
+import 'package:bloctemplate/src/config/notifications/local/local_notifications.dart';
 import 'package:firebase_auth_repository/firebase_authentication_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -16,6 +17,8 @@ Future<void> main() async {
       WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp();
+  final LocalNotificationService _ = LocalNotificationService();
+  // service.payload
   GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   SystemChrome.setEnabledSystemUIMode(
     SystemUiMode.manual,
